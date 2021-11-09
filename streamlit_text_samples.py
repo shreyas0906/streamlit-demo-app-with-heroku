@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+# import pandas as pd
 from PIL import Image
 import plotly.express as px
 from memory_profiler import profile
@@ -60,15 +60,15 @@ def main():
     st.help(range)
 
     # This is to display dynamic pandas dataframe
-    df = pd.read_csv('iris.csv')
+    # df = pd.read_csv('iris.csv')
     # How to modify this to highlight particular cells..?
-    st.dataframe(df.style.highlight_max(axis=0))
+    # st.dataframe(df.style.highlight_max(axis=0))
 
     # This is to display static dataframes.
     # st.table(df)
 
     # using st.write to display table
-    st.write(df.head(5))
+    # st.write(df.head(5))
 
     # using json file
     st.json({'hi': "name"})
@@ -157,8 +157,8 @@ def main():
     # Color input
     color = st.color_picker("Select color")
 
-    df_1 = pd.read_csv('data/lang_data.csv')
-    st.dataframe(df_1)
+    # df_1 = pd.read_csv('data/lang_data.csv')
+    # st.dataframe(df_1)
 
     # fig = px.pie(df_1, values='Sum', names='lang', title='pie chart')
     #
@@ -166,38 +166,6 @@ def main():
 
     # fig2 = px.bar(df_1, x='lang', y='sum')
     # st.plotly_chart(fig2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
